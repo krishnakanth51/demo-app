@@ -1,0 +1,16 @@
+<h3 align='center'>-----------------------------------------------------</h3>
+<table border=2px align='left'>
+    <tr><th>C_Nmae</th>
+        <th>C_Code</th>
+        <th>University</th>     
+    </tr>
+    {% for i in col_data %}
+        <tr><td><a href="{{i.College_Name}}"></a>{{i.College_Name}}</td>
+            <td>{{i.College_Code}}</td>
+            <td>{{i.University}}</td>
+            <td>{{i.Rank_limit}}</td>
+        </tr>  
+
+   
+    {%endfor%}
+</table> 

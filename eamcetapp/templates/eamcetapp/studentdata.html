@@ -1,0 +1,30 @@
+<body>
+    <center>
+    <h2>Student_Details Registraion Form</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <table>                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <br>
+                    <center>
+                    <input type="submit" value="submit" class="btn btn-success">
+                    <input type="Reset" value="Reset" class="btn btn-danger">
+                </center>
+                </form>
+                </table>
+            </div>
+        </div>
+    </div>
+    </center><header>
+        <div class="container">
+                            <div class="row">
+                                <div class="col-md-offset-10 col-md-2">
+                                        <h1><a href="/login/" align="left">Login</a></h1> 
+                                </div>
+                            </div>
+                        </div>
+    </header>
+    </body>
+    </html>

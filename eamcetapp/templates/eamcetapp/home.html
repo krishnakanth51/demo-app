@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 1000px; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <!-- <h2 align="center">College Website</h2> -->
+    <header>
+        <h2 align="center">Welcome Eamcet counselling.</h2>
+        <h3 align="center">----------------------------------</h3>
+    </header>
+
+    <div class="row">
+      <div class="column" style="background-color:rgba(21, 85, 87, 0.74);">
+            <h2 align='center'><spn>College list is preority</spn></h2>
+                <table border=2px align='center'>
+                    <tr><th>C_Nmae</th>
+                        <th>C_Code</th>
+                        <th>University</th>     
+                    </tr>
+                    {% for i in collegelist %}
+                        <tr><td>{{i.College_Name}}</td>
+                            <td>{{i.College_Code}}</td>
+                            <td>{{i.University}}</td>
+                        </tr>  
+                          
+                    {%endfor%}
+                </table>
+      </div>
+      <div class="column" style="background-color:rgb(21, 85, 87, 0.74);">
+        <form method="POST"> 
+            {% csrf_token %}
+            {{Rform.as_p}}
+            <br>
+            <center>
+            <input type="submit" value="Register" class="btn btn-success">
+            <input type='Reset' value="Cancel" class="btn btn-danger">
+           </center>
+        </form>
+      </div>
+    </div>
+      
+    
+    </body>
+    </html>
+   
