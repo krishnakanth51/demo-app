@@ -23,7 +23,7 @@ urlpatterns = [
     path('studentdata/',views.StudentDataView),
     path('colldata/',views.CollegeView),
     path('homepage/',views.HomeView),
-    path('register/',views.RegisterView),
+    path('',views.RegisterView),
     path('emailsend/<str:Email>/',views.Email_Sending),
         # path('register',views.Register),
     path('assign/<str:Eamcet_Rank>/',views.Assign_List_View)
